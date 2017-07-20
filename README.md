@@ -1,4 +1,4 @@
-#QR-GEN - gerador de qr-codes
+# QR-GEN - gerador de qr-codes
 
 Este pequeno programa que gera qr-codes a partir de um arquivo.
 
