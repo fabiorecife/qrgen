@@ -17,7 +17,7 @@ import org.apache.commons.cli.ParseException;
 import net.glxn.qrgen.core.image.ImageType;
 import net.glxn.qrgen.javase.QRCode;
 
-public class App {
+public class Qrgen {
 	
 	String[] args ;
 	private Options options;
@@ -32,7 +32,7 @@ public class App {
 	String regex = "\\D+";
 	String substituir = "";
 	
-	App(String[] args) {
+	public Qrgen(String[] args) {
 		this.args = args;
 	}
 	
@@ -118,7 +118,7 @@ public class App {
 
 	public static void main(String[] args) throws ParseException, IOException {
 		
-		App app = new App(args);
+		Qrgen app = new Qrgen(args);
 		app.execute();
 		
 	}

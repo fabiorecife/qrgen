@@ -8,25 +8,11 @@ O arquivo deve conter uma coluna com a informação que vai no qr-code.
 ## Gerar arquivo jar
 
 ```bash
-$ git clone ...
+$ https://github.com/fabiorecife/qrgen.git
 $ cd qrgen
 $ mvn clean package assembly:assembly -Dmaven.test.skip=true
-``
-
-
-##Exemplo de arquivo de entrada
-
-cpf,nome
-05329160340,JOAO FAQUI
-46248128081,TIAGO DAQUI 
-
-##Exemplo 1 
-
-java -cp qrgen-1.0.0-jar-with-dependencies.jar net.fabioalmeida.qrgen.App -arquivo amostra.csv -saida /Users/nome/Downloads/qr-codes -separador ,  
-
-##Exemplo 2
-
-java -cp qrgen-1.0.0-jar-with-dependencies.jar net.fabioalmeida.qrgen.App -ajuda
+$ cd target
+$ java -cp qrgen-1.0.0-jar-with-dependencies.jar App -ajuda
 
 usage: qrgen
 (obs: a primeira linha é ignorada)
@@ -44,3 +30,19 @@ versão:1.0.0
  -substituir <arg>   valor que substitui a seleção da expressao regular
  -tamanho <arg>      tamanho em pixel, usar x,y, exemplo: 160,160
 
+```
+
+
+##Exemplo de arquivo de entrada
+
+``
+cpf,nome
+05329160340,JOAO FAQUI
+46248128081,TIAGO DAQUI 
+```
+
+##Exemplo 1 
+
+```bash
+$ java -cp qrgen-1.0.0-jar-with-dependencies.jar App -arquivo amostra.csv -saida /Users/nome/Downloads/qr-codes -separador ,  
+```
